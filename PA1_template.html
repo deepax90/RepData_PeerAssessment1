@@ -111,7 +111,8 @@ plot(stepsInInterval$interval, stepsInInterval$steps, type='l',main=&quot;Averag
 <h2>Inputing missing values</h2>
 <pre class="r"><code>length(which(is.na(data$steps)))</code></pre>
 <pre><code>## [1] 2304</code></pre>
-<pre class="r"><code>modifiedData &lt;- data
+<pre class="r"><code>## In the code below, NA have been replaced with mean for that 5-minute interval.
+modifiedData &lt;- data
 for (i in 1:nrow(modifiedData))  {
     if (is.na(modifiedData$steps[i]))  {
         intervalValue &lt;- modifiedData$interval[i]

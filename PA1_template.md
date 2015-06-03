@@ -89,6 +89,7 @@ length(which(is.na(data$steps)))
 ```
 
 ```r
+## In the code below, NA have been replaced with mean for that 5-minute interval.
 modifiedData <- data
 for (i in 1:nrow(modifiedData))  {
     if (is.na(modifiedData$steps[i]))  {
